@@ -1,4 +1,4 @@
-name: Build and Release Windows EXE
+name: Build and Release Windows Portable & ZIP
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build and Publish Installer
+      - name: Build Portable EXE and ZIP
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx electron-builder --win --publish always

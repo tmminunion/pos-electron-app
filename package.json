@@ -1,7 +1,6 @@
 {
   "name": "pos-electron-app",
-  "version": "1.0.0",
-  "description": "POS DataCenter Local-First with OTA Web Assets",
+  "version": "1.0.3",
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
@@ -16,21 +15,18 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "USERNAME_GITHUB_ANDA",
+        "owner": "tmminunion",
         "repo": "pos-electron-app"
       }
     ],
     "win": {
-      "target": ["nsis"],
-      "icon": "assets/icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "target": [
+        "portable",
+        "zip"
+      ]
     }
   },
   "dependencies": {
-    "adm-zip": "^0.5.10",
     "better-sqlite3": "^11.8.1",
     "express": "^4.21.2"
   },
