@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>POS DataCenter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Katalog Produk (SQLite Local)</h1>
+    <div class="form-box">
+      <input type="text" id="nama" placeholder="Nama Produk">
+      <input type="number" id="harga" placeholder="Harga">
+      <button onclick="simpanProduk()">Tambah Data</button>
+    </div>
+    <table id="tabel-produk">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Harga</th>
+          <th>Waktu Update</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

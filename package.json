@@ -1,0 +1,41 @@
+{
+  "name": "pos-electron-app",
+  "version": "1.0.0",
+  "description": "POS DataCenter Local-First with OTA Web Assets",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.nufat.datacenter",
+    "productName": "DataCenter POS",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "USERNAME_GITHUB_ANDA",
+        "repo": "pos-electron-app"
+      }
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}
